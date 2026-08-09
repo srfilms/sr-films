@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SR Films | Photography & Cinematography</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#080808;
+    color:white;
+}
+
+/* NAVBAR */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(0,0,0,0.95);
+    border-bottom:1px solid #222;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.logo span,
+h1 span,
+h2 span{
+    color:#d4a017;
+}
+
+.menu{
+    display:flex;
+    gap:25px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.menu a:hover{
+    color:#d4a017;
+}
+
+/* HERO */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+
+    background:
+    linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.3)),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552")
+    center/cover no-repeat;
+}
+
+.hero-content{
+    max-width:750px;
+}
+
+.small{
+    color:#d4a017;
+    letter-spacing:4px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:65px;
+    line-height:1.05;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#ddd;
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    background:#d4a017;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:4px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:white;
+    transform:translateY(-3px);
+}
+
+.outline{
+    background:transparent;
+    color:white;
+    border:1px solid #d4a017;
+}
+
+/* SECTIONS */
+
+section{
+    padding:90px 8%;
+    text-align:center;
+}
+
+.label{
+    color:#d4a017;
+    letter-spacing:4px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+h2{
+    font-size:42px;
+    margin-bottom:30px;
+}
+
+/* ABOUT */
+
+.about-text{
+    max-width:800px;
+    margin:auto;
+    color:#aaa;
+    line-height:1.8;
+    font-size:17px;
+}
+
+.stats{
+    max-width:800px;
+    margin:45px auto 0;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.stat{
+    background:#141414;
+    padding:30px;
+    border:1px solid #252525;
+    border-radius:7px;
+}
+
+.stat h3{
+    color:#d4a017;
+    font-size:32px;
+}
+
+.stat p{
+    color:#999;
+    margin-top:8px;
+}
+
+/* SERVICES */
+
+.services{
+    background:#0b0b0b;
+}
+
+.service-grid{
+    margin-top:45px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:#151515;
+    padding:35px 25px;
+    border:1px solid #252525;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:#d4a017;
+}
+
+.icon{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#999;
+    line-height:1.6;
+}
+
+/* PORTFOLIO */
+
+.gallery{
+    margin-top:45px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:6px;
+    transition:.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.04);
+}
+
+/* BOOKING */
+
+.booking{
+    background:
+    linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.82)),
+    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed")
+    center/cover no-repeat;
+}
+
+.booking p{
+    color:#bbb;
+    margin-bottom:30px;
+}
+
+.contact-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.contact-btn{
+    min-width:160px;
+    padding:15px 25px;
+    border-radius:4px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.contact-btn:hover{
+    transform:translateY(-4px);
+}
+
+.whatsapp{
+    background:#25D366;
+    color:white;
+}
+
+.gmail{
+    background:#fff;
+    color:#000;
+}
+
+.instagram{
+    background:#d62976;
+    color:white;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#0c0c0c;
+}
+
+.contact-grid{
+    max-width:900px;
+    margin:40px auto 0;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.contact-box{
+    background:#151515;
+    padding:30px 15px;
+    border:1px solid #252525;
+    border-radius:7px;
+}
+
+.contact-box .icon{
+    font-size:32px;
+}
+
+.contact-box h3{
+    color:#d4a017;
+    margin-bottom:10px;
+}
+
+.contact-box p{
+    color:#999;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:45px 20px;
+    background:#050505;
+}
+
+.footer-logo{
+    font-size:28px;
+    font-weight:bold;
+    letter-spacing:3px;
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#777;
+    font-size:13px;
+    margin-top:8px;
+}
+
+.social{
+    margin:25px 0;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
+
+.social a{
+    color:#aaa;
+    text-decoration:none;
+}
+
+.social a:hover{
+    color:#d4a017;
+}
+
+hr{
+    border:0;
+    border-top:1px solid #222;
+    margin:25px 0;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+        padding:18px 5%;
+    }
+
+    .menu{
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .menu a{
+        font-size:12px;
+    }
+
+    .hero{
+        min-height:80vh;
+        padding:0 7%;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    section{
+        padding:70px 6%;
+    }
+
+    h2{
+        font-size:34px;
+    }
+
+    .stats,
+    .service-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery img{
+        height:180px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        SR <span>FILMS</span>
+    </div>
+
+    <div class="menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="small">
+            WELCOME TO SR FILMS
+        </p>
+
+        <h1>
+            We Capture<br>
+            <span>Your Beautiful Moments</span>
+        </h1>
+
+        <p>
+            Wedding Photography • Cinematography • Pre Wedding
+        </p>
+
+        <div class="buttons">
+
+            <a href="#contact" class="btn">
+                Book Your Shoot
+            </a>
+
+            <a href="#portfolio" class="btn outline">
+                View Portfolio
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <p class="label">WHO WE ARE</p>
+
+    <h2>
+        About <span>SR Films</span>
+    </h2>
+
+    <p class="about-text">
+        SR Films is a professional photography and cinematography
+        studio. We capture weddings, pre-weddings, events and
+        special moments with creativity and cinematic style.
+        Our goal is to turn your beautiful moments into memories
+        that you can remember forever.
+    </p>
+
+
+    <div class="stats">
+
+        <div class="stat">
+            <h3>5+</h3>
+            <p>Years Experience</p>
+        </div>
+
+        <div class="stat">
+            <h3>500+</h3>
+            <p>Events Covered</p>
+        </div>
+
+        <div class="stat">
+            <h3>100%</h3>
+            <p>Creative Work</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+    <p class="label">WHAT WE DO</p>
+
+    <h2>
+        Our <span>Services</span>
+    </h2>
+
+
+    <div class="service-grid">
+
+        <div class="card">
+            <div class="icon">📸</div>
+            <h3>Wedding Photography</h3>
+            <p>
+                Wedding ke har special moment ko
+                professional photography ke saath capture karte hain.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">🎬</div>
+            <h3>Cinematic Films</h3>
+            <p>
+                Aapki wedding story ko beautiful cinematic
+                film ke roop mein create karte hain.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">❤️</div>
+            <h3>Pre Wedding</h3>
+            <p>
+                Creative locations aur concepts ke saath
+                memorable pre-wedding shoot.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">🚁</div>
+            <h3>Drone Photography</h3>
+            <p>
+                Wedding aur events ke liye
+                cinematic aerial drone shots.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">🎞️</div>
+            <h3>Event Films</h3>
+            <p>
+                Special events aur functions ki
+                professional video coverage.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">💍</div>
+            <h3>Complete Wedding Package</h3>
+            <p>
+                Photography, candid, cinematic,
+                drone aur complete wedding coverage.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio">
+
+    <p class="label">OUR WORK</p>
+
+    <h2>
+        Our <span>Portfolio</span>
+    </h2>
+
+
+    <div class="gallery">
+
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552">
+
+        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed">
+
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc">
+
+        <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a">
+
+        <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde">
+
+        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3">
+
+    </div>
+
+</section>
+
+
+<!-- BOOKING -->
+
+<section class="booking">
+
+    <p class="label">
+        LET'S WORK TOGETHER
+    </p>
+
+    <h2>
+        Book <span>SR Films</span>
+    </h2>
+
+    <p>
+        Apni special memories ko cinematic banane ke liye
+        aaj hi humse contact karein.
+    </p>
+
+
+    <div class="contact-buttons">
+
+        <!-- WHATSAPP -->
+        <a
+        href="https://wa.me/918529226979"
+        target="_blank"
+        class="contact-btn whatsapp">
+
+            📱 WhatsApp
+
+        </a>
+
+
+        <!-- GMAIL -->
+        <a
+        href="mailto:mohammedsahil01809@gmail.com"
+        class="contact-btn gmail">
+
+            📧 Gmail
+
+        </a>
+
+
+        <!-- INSTAGRAM -->
+        <a
+        href="https://www.instagram.com/sr.films_3/"
+        target="_blank"
+        class="contact-btn instagram">
+
+            📷 Instagram
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <p class="label">
+        CONTACT US
+    </p>
+
+    <h2>
+        Get In <span>Touch</span>
+    </h2>
+
+
+    <div class="contact-grid">
+
+        <div class="contact-box">
+
+            <div class="icon">📍</div>
+
+            <h3>Location</h3>
+
+            <p>
+                Bhilwara, Rajasthan, india
+            </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <div class="icon">📞</div>
+
+            <h3>Phone</h3>
+
+            <p>
+                +91 8529226979
+            </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <div class="icon">📧</div>
+
+            <h3>Email</h3>
+
+            <p>
+                mohammedsahil01809@gmail.com
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-logo">
+        SR <span>FILMS</span>
+    </div>
+
+    <p>
+        Photography • Cinematography • Wedding Films
+    </p>
+
+
+    <div class="social">
+
+        <a
+        href="https://www.instagram.com/sr.films_3/"
+        target="_blank">
+            Instagram
+        </a>
+
+        <a
+        href="https://wa.me/918529226979"
+        target="_blank">
+            WhatsApp
+        </a>
+
+        <a
+        href="mailto:mohammedsahil01809@gmail.com">
+            Gmail
+        </a>
+
+    </div>
+
+
+    <hr>
+
+    <p>
+        © 2026 SR Films. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
