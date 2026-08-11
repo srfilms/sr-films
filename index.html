@@ -261,12 +261,17 @@ h2{
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    text-align:center;
 
     background:
-    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    linear-gradient(
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.78)
+    ),
     url("sahil.png") center center / contain no-repeat;
 
     background-color:#000;
+}
 }
 }
 }
@@ -279,8 +284,34 @@ h2{
 .contact-buttons{
     display:flex;
     justify-content:center;
-    gap:15px;
+    align-items:center;
+    gap:12px;
     flex-wrap:wrap;
+}
+
+.contact-btn{
+    min-width:125px;
+    padding:11px 18px;
+    border-radius:4px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+}
+
+.contact-btn .contact-icon{
+    width:18px;
+    height:18px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-size:15px;
+}
+}
 }
 
 .contact-btn{
@@ -453,7 +484,49 @@ hr{
     .gallery{
         grid-template-columns:1fr 1fr;
     }
+.booking{
+    min-height:100vh;
+    justify-content:flex-end;
+    padding:0 6% 55px;
+    background-size:contain;
+    background-position:center center;
+}
 
+.booking .label{
+    font-size:10px;
+    letter-spacing:3px;
+    margin-bottom:10px;
+}
+
+.booking h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.booking > p:not(.label){
+    font-size:13px;
+    line-height:1.6;
+    margin-bottom:20px;
+    max-width:340px;
+}
+
+.contact-buttons{
+    gap:8px;
+    width:100%;
+    flex-wrap:nowrap;
+}
+
+.contact-btn{
+    min-width:0;
+    width:33.33%;
+    padding:10px 6px;
+    font-size:11px;
+    gap:5px;
+}
+
+.contact-btn .contact-icon{
+    font-size:13px;
+}
 }
 
 </style>
@@ -741,7 +814,7 @@ hr{
             target="_blank"
             class="contact-btn whatsapp">
 
-            📱 WhatsApp
+            <span class="contact-icon">◉</span> WhatsApp
 
         </a>
 
@@ -753,7 +826,7 @@ hr{
             href="mailto:mohammedsahil01809@gmail.com"
             class="contact-btn gmail">
 
-            📧 Gmail
+            <span class="contact-icon">✉</span> Gmail
 
         </a>
 
@@ -766,7 +839,7 @@ hr{
             target="_blank"
             class="contact-btn instagram">
 
-            📷 Instagram
+            <span class="contact-icon">◎</span> Instagram
 
         </a>
 
