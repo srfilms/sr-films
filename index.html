@@ -65,6 +65,7 @@ h2 span{
     color:#d4a017;
 }
 
+
 /* HERO */
 
 .hero{
@@ -130,6 +131,7 @@ h2 span{
     border:1px solid #d4a017;
 }
 
+
 /* SECTIONS */
 
 section{
@@ -149,6 +151,7 @@ h2{
     font-size:42px;
     margin-bottom:30px;
 }
+
 
 /* ABOUT */
 
@@ -184,6 +187,7 @@ h2{
     color:#999;
     margin-top:8px;
 }
+
 
 /* SERVICES */
 
@@ -225,6 +229,7 @@ h2{
     line-height:1.6;
 }
 
+
 /* PORTFOLIO */
 
 .gallery{
@@ -242,11 +247,11 @@ h2{
     transition:.4s;
     display:block;
 }
-}
 
 .gallery img:hover{
     transform:scale(1.04);
 }
+
 
 /* BOOKING */
 
@@ -297,6 +302,7 @@ h2{
     color:white;
 }
 
+
 /* CONTACT */
 
 .contact{
@@ -330,6 +336,7 @@ h2{
 .contact-box p{
     color:#999;
 }
+
 
 /* FOOTER */
 
@@ -395,9 +402,15 @@ hr{
         font-size:12px;
     }
 
+    /* MOBILE HERO PHOTO FIX */
+
     .hero{
         min-height:80vh;
         padding:0 7%;
+        background-position:center center;
+        background-size:auto 100%;
+        background-repeat:no-repeat;
+        background-color:#000;
     }
 
     .hero h1{
@@ -425,7 +438,6 @@ hr{
     .gallery{
         grid-template-columns:1fr 1fr;
     }
-    }
 
 }
 
@@ -434,6 +446,7 @@ hr{
 
 
 <body>
+
 
 <!-- NAVBAR -->
 
@@ -444,14 +457,21 @@ hr{
     </div>
 
     <div class="menu">
+
         <a href="#home">Home</a>
+
         <a href="#about">About</a>
+
         <a href="#services">Services</a>
+
         <a href="#portfolio">Portfolio</a>
+
         <a href="#contact">Contact</a>
+
     </div>
 
 </nav>
+
 
 
 <!-- HERO -->
@@ -490,40 +510,62 @@ hr{
 </section>
 
 
+
 <!-- ABOUT -->
 
 <section id="about">
 
-    <p class="label">WHO WE ARE</p>
+    <p class="label">
+        WHO WE ARE
+    </p>
 
     <h2>
         About <span>SR Films</span>
     </h2>
 
     <p class="about-text">
+
         SR Films is a professional photography and cinematography
         studio. We capture weddings, pre-weddings, events and
         special moments with creativity and cinematic style.
         Our goal is to turn your beautiful moments into memories
         that you can remember forever.
+
     </p>
 
 
     <div class="stats">
 
         <div class="stat">
+
             <h3>5+</h3>
-            <p>Years Experience</p>
+
+            <p>
+                Years Experience
+            </p>
+
         </div>
 
+
         <div class="stat">
+
             <h3>500+</h3>
-            <p>Events Covered</p>
+
+            <p>
+                Events Covered
+            </p>
+
         </div>
 
+
         <div class="stat">
+
             <h3>100%</h3>
-            <p>Creative Work</p>
+
+            <p>
+                Creative Work
+            </p>
+
         </div>
 
     </div>
@@ -531,11 +573,14 @@ hr{
 </section>
 
 
+
 <!-- SERVICES -->
 
 <section class="services" id="services">
 
-    <p class="label">WHAT WE DO</p>
+    <p class="label">
+        WHAT WE DO
+    </p>
 
     <h2>
         Our <span>Services</span>
@@ -544,75 +589,82 @@ hr{
 
     <div class="service-grid">
 
+
+        <!-- SERVICE 1 -->
+
         <div class="card">
-            <div class="icon">📸</div>
-            <h3>Wedding Photography</h3>
+
+            <div class="icon">
+                📸
+            </div>
+
+            <h3>
+                Wedding Photography
+            </h3>
+
             <p>
                 Wedding ke har special moment ko
                 professional photography ke saath capture karte hain.
             </p>
+
         </div>
 
 
+
+        <!-- SERVICE 2 -->
+
         <div class="card">
-            <div class="icon">🎬</div>
-            <h3>Cinematic Films</h3>
+
+            <div class="icon">
+                🎬
+            </div>
+
+            <h3>
+                Cinematic Films
+            </h3>
+
             <p>
                 Aapki wedding story ko beautiful cinematic
                 film ke roop mein create karte hain.
             </p>
+
         </div>
 
 
+
+        <!-- SERVICE 3 -->
+
         <div class="card">
-            <div class="icon">❤️</div>
-            <h3>Pre Wedding</h3>
+
+            <div class="icon">
+                ❤️
+            </div>
+
+            <h3>
+                Pre Wedding
+            </h3>
+
             <p>
                 Creative locations aur concepts ke saath
                 memorable pre-wedding shoot.
             </p>
+
         </div>
 
-
-        <div class="card">
-            <div class="icon">🚁</div>
-            <h3>Drone Photography</h3>
-            <p>
-                Wedding aur events ke liye
-                cinematic aerial drone shots.
-            </p>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">🎞️</div>
-            <h3>Event Films</h3>
-            <p>
-                Special events aur functions ki
-                professional video coverage.
-            </p>
-        </div>
-
-
-        <div class="card">
-            <div class="icon">💍</div>
-            <h3>Complete Wedding Package</h3>
-            <p>
-                Photography, candid, cinematic,
-                drone aur complete wedding coverage.
-            </p>
-        </div>
 
     </div>
 
 </section>
 
 
+
 <!-- PORTFOLIO -->
 
 <section id="portfolio">
 
-    <p class="label">OUR WORK</p>
+    <p class="label">
+        OUR WORK
+    </p>
 
     <h2>
         Our <span>Portfolio</span>
@@ -621,21 +673,29 @@ hr{
 
     <div class="gallery">
 
+
         <img src="deeksha_shekhar_18_14050113_090321816.jpg.jpeg">
+
 
         <img src="freelancer_adityapunj_14040220_154518310.jpg.jpeg">
 
-       <img src="jaipurphotographer__14040929_121808680.jpg.jpeg">
+
+        <img src="jaipurphotographer__14040929_121808680.jpg.jpeg">
+
 
         <img src="nimantran_wedding_films_14041223_172711536.jpg.jpeg">
 
+
         <img src="rihan_photography__14040523_193610698.jpg.jpeg">
 
+
         <img src="weddingdiariesbyomp_14040703_084831021.jpg.jpeg">
+
 
     </div>
 
 </section>
+
 
 
 <!-- BOOKING -->
@@ -658,40 +718,48 @@ hr{
 
     <div class="contact-buttons">
 
+
         <!-- WHATSAPP -->
+
         <a
-        href="https://wa.me/918529226979"
-        target="_blank"
-        class="contact-btn whatsapp">
+            href="https://wa.me/918529226979"
+            target="_blank"
+            class="contact-btn whatsapp">
 
             📱 WhatsApp
 
         </a>
 
 
+
         <!-- GMAIL -->
+
         <a
-        href="mailto:mohammedsahil01809@gmail.com"
-        class="contact-btn gmail">
+            href="mailto:mohammedsahil01809@gmail.com"
+            class="contact-btn gmail">
 
             📧 Gmail
 
         </a>
 
 
+
         <!-- INSTAGRAM -->
+
         <a
-        href="https://www.instagram.com/sr.films_3/"
-        target="_blank"
-        class="contact-btn instagram">
+            href="https://www.instagram.com/sr.films_3/"
+            target="_blank"
+            class="contact-btn instagram">
 
             📷 Instagram
 
         </a>
 
+
     </div>
 
 </section>
+
 
 
 <!-- CONTACT -->
@@ -709,11 +777,16 @@ hr{
 
     <div class="contact-grid">
 
+
         <div class="contact-box">
 
-            <div class="icon">📍</div>
+            <div class="icon">
+                📍
+            </div>
 
-            <h3>Location</h3>
+            <h3>
+                Location
+            </h3>
 
             <p>
                 Bhilwara, Rajasthan, india
@@ -722,11 +795,16 @@ hr{
         </div>
 
 
+
         <div class="contact-box">
 
-            <div class="icon">📞</div>
+            <div class="icon">
+                📞
+            </div>
 
-            <h3>Phone</h3>
+            <h3>
+                Phone
+            </h3>
 
             <p>
                 +91 8529226979
@@ -735,11 +813,16 @@ hr{
         </div>
 
 
+
         <div class="contact-box">
 
-            <div class="icon">📧</div>
+            <div class="icon">
+                📧
+            </div>
 
-            <h3>Email</h3>
+            <h3>
+                Email
+            </h3>
 
             <p>
                 mohammedsahil01809@gmail.com
@@ -747,9 +830,11 @@ hr{
 
         </div>
 
+
     </div>
 
 </section>
+
 
 
 <!-- FOOTER -->
@@ -767,33 +852,45 @@ hr{
 
     <div class="social">
 
+
         <a
-        href="https://www.instagram.com/sr.films_3/"
-        target="_blank">
+            href="https://www.instagram.com/sr.films_3/"
+            target="_blank">
+
             Instagram
+
         </a>
 
+
         <a
-        href="https://wa.me/918529226979"
-        target="_blank">
+            href="https://wa.me/918529226979"
+            target="_blank">
+
             WhatsApp
+
         </a>
 
+
         <a
-        href="mailto:mohammedsahil01809@gmail.com">
+            href="mailto:mohammedsahil01809@gmail.com">
+
             Gmail
+
         </a>
+
 
     </div>
 
 
     <hr>
 
+
     <p>
         © 2026 SR Films. All Rights Reserved.
     </p>
 
 </footer>
+
 
 </body>
 </html>
