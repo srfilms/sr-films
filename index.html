@@ -251,7 +251,74 @@ h2{
 .gallery img:hover{
     transform:scale(1.04);
 }
+/* PRE WEDDING VIDEO CARD */
 
+.service-grid{
+    align-items:start;
+}
+
+.prewedding-card{
+    border-color:#d4a017;
+}
+
+.prewedding-films{
+    margin-top:22px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.prewedding-film{
+    position:relative;
+    display:block;
+    overflow:hidden;
+    border-radius:7px;
+    border:1px solid #292929;
+    background:#000;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.prewedding-film:hover{
+    transform:scale(1.02);
+    border-color:#d4a017;
+}
+
+.prewedding-film img{
+    width:100%;
+    aspect-ratio:16 / 9;
+    object-fit:cover;
+    display:block;
+}
+
+.prewedding-film .play{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:55px;
+    height:38px;
+    background:#ff0000;
+    border-radius:9px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:20px;
+}
+
+.prewedding-film .film-title{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:9px;
+    background:linear-gradient(transparent,rgba(0,0,0,.95));
+    color:white;
+    font-size:14px;
+    font-weight:bold;
+    text-align:center;
+}
 
 /* BOOKING */
 
@@ -735,31 +802,65 @@ hr{
     </h3>
 
     <p>
-        Creative locations aur concepts ke saath
-        memorable pre-wedding shoot.
-    </p>
+       <div class="prewedding-films">
 
-    <div style="margin-top:20px; display:flex; flex-direction:column; gap:8px;">
+    <!-- VIDEO 1 -->
+    <a
+        href="https://www.youtube.com/watch?v=KP8cXJYTfLA"
+        target="_blank"
+        class="prewedding-film"
+    >
+        <img
+            src="https://i.ytimg.com/vi/KP8cXJYTfLA/hqdefault.jpg"
+            alt="Pre Wedding Film 1"
+        >
 
-        <a href="https://youtu.be/KP8cXJYTfLA"
-           target="_blank"
-           style="color:#d4a017; text-decoration:none; font-size:14px;">
-            ▶ Pre Wedding Film 1
-        </a>
+        <span class="play">▶</span>
 
-        <a href="https://youtu.be/GCzfN_r-eyI"
-           target="_blank"
-           style="color:#d4a017; text-decoration:none; font-size:14px;">
-            ▶ Pre Wedding Film 2
-        </a>
+        <span class="film-title">
+            Pre Wedding Film 1
+        </span>
+    </a>
 
-        <a href="https://youtu.be/JLW67mV78cE"
-           target="_blank"
-           style="color:#d4a017; text-decoration:none; font-size:14px;">
-            ▶ Pre Wedding Film 3
-        </a>
 
-    </div>
+    <!-- VIDEO 2 -->
+    <a
+        href="https://www.youtube.com/watch?v=GCzfN_r-eyI"
+        target="_blank"
+        class="prewedding-film"
+    >
+        <img
+            src="https://i.ytimg.com/vi/GCzfN_r-eyI/hqdefault.jpg"
+            alt="Pre Wedding Film 2"
+        >
+
+        <span class="play">▶</span>
+
+        <span class="film-title">
+            Pre Wedding Film 2
+        </span>
+    </a>
+
+
+    <!-- VIDEO 3 -->
+    <a
+        href="https://www.youtube.com/watch?v=JLW67mV78cE"
+        target="_blank"
+        class="prewedding-film"
+    >
+        <img
+            src="https://i.ytimg.com/vi/JLW67mV78cE/hqdefault.jpg"
+            alt="Pre Wedding Film 3"
+        >
+
+        <span class="play">▶</span>
+
+        <span class="film-title">
+            Pre Wedding Film 3
+        </span>
+    </a>
+
+</div>
 
 </div>
 
